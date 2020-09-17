@@ -24,7 +24,19 @@ def get_random_sentence(animals, adjectives, fruits):
 	animal = animals[random.randrange(0,len(animals))]
 	adjective = adjectives[random.randrange(0,len(adjectives))]
 	fruit = fruits[random.randrange(0,len(fruits))]
-	return f"Aujourd'Hui, j'ai vu un {animal} s'emparer d'un panier {adjective} plein de {fruit}."
+	return f"Aujourd'hui, j'ai vu un {animal} s'emparer d'un panier {adjective} plein de {fruit}."
+
+# def alt_get_random_sentence(animals, adjectives, fruits):
+# 	basic_sentence = "Aujourd'hui, j'ai vu un %s s'emparer d'un panier %s plein de %s."
+# 	words = []
+# 	for word_set in (animals, adjectives, fruits):
+# 		words += [word_set[random.randrange(0, len(word_set))]]
+# 	return basic_sentence % tuple(words)
+
+# def alt_alt_get_random_sentence(animals, adjectives, fruits):
+# 	basic_sentence = "Aujourd'hui, j'ai vu un %s s'emparer d'un panier %s plein de %s."
+# 	words = [word_set[random.randrange(0, len(word_set))] for word_set in (animals, adjectives, fruits)]
+# 	return basic_sentence % tuple(words)
 
 
 if __name__ == "__main__":
@@ -42,3 +54,5 @@ if __name__ == "__main__":
 	adjectives = ("rouge", "officiel", "lourd")
 	fruits = ("pommes", "kiwis", "bananes")
 	print(get_random_sentence(animals, adjectives, fruits))
+	# print(alt_get_random_sentence(animals, adjectives, fruits))
+	# print(alt_alt_get_random_sentence(animals, adjectives, fruits))
